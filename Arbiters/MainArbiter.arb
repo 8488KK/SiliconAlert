@@ -1,0 +1,57 @@
+include<[_inc_path]\AiScript.dfn>;
+include<[_inc_path]\AiScript.mcr>;
+include<[_main_path]\Projects\Projects\Scripts\SiliconAlert\Constants\Consts.dfn>;
+
+/*
+BO - PLAYER_1
+WS - PLAYER_5
+BO - PLAYER_7
+
+SI - PLAYER_3
+*/
+
+OpenArbiter("Arbiter Silicon Alert");
+
+    OpenEvents();
+        //include<[_curr_path]\EventsEndMission.arb>;
+        include<[_curr_path]\EventsSetRes.arb>;
+        include<[_curr_path]\EventsDeadZone.arb>;
+        include<[_curr_path]\EventsIntro.arb>;
+        include<[_curr_path]\EventsSetTurretsSI.arb>;
+        
+        Event(TRUE) {
+            //ActStringMess(PLAYER_1, AIREL_MYSELF, _inttostr(GetTimerTime(PLAYER_1)));
+            ActLockEvent();
+        };
+
+        // Событие, которое отслеживает создание объектов у игроков 1, 5, 7 и присваивает им имена
+        EventPlObjCreated(_PI0 == PLAYER_1 || _PI0 == PLAYER_5 || _PI0 == PLAYER_7)
+        {
+            // Присваиваем имя объекту в зависимости от номера игрока
+            if (_PI0 == PLAYER_1)
+            {
+                ActSetName("Player_1", _PI5, _PI6, _PI7, 0);
+            }
+            if (_PI0 == PLAYER_5)
+            {
+                ActSetName("Player_5", _PI5, _PI6, _PI7, 0);
+            }
+            if (_PI0 == PLAYER_7)
+            {
+                ActSetName("Player_7", _PI5, _PI6, _PI7, 0);
+            }
+            
+            // Опционально: можно добавить сообщение
+            // actStringMess("Object created for player " + _PI0 + " and named appropriately.");
+            ActLockEvent();
+        };
+
+    CloseEvents();
+    //include<[_curr_path]\arbiter_pl1.arb>;
+    //include<[_curr_path]\arbiter_pl2.arb>;
+    //include<[_curr_path]\arbiter_pl5_AI.arb>;
+    //include<[_curr_path]\arbiter_pl6.arb>;
+    //include<[_curr_path]\arbiter_tech_side1.arb>;
+    //include<[_curr_path]\arbiter_tech_side2.arb>;
+    
+CloseArbiter();

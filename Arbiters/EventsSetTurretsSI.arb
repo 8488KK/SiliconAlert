@@ -1,0 +1,107 @@
+// Constants for turret positions
+TURRET_X_DPT = 63;
+TURRET_Y_DPT_START = 108;
+TURRET_Y_DPT_END = 113;
+
+TURRET_X_GAS = 67;
+TURRET_Y_GAS_START = 108;
+TURRET_Y_GAS_END = 113;
+
+TURRET_X_ION = 70;
+TURRET_Y_ION_START = 107;
+TURRET_Y_ION_END = 114;
+
+// Turret types
+TURRET_DPT_GUN = 103;
+TURRET_GAS_SHELL_LAUNCHER = 102;
+TURRET_ION_REFLECTOR = 104;
+TURRET_PARCHER = 113;
+TURRET_PP_PULSAR = 107;
+
+OFFSET_TURRET_POS = 2;
+
+// Create initial turrets at fixed positions
+/*
+Event(TRUE){
+    // Create DPT_GUNs at fixed position (y: 108-113)
+    _RT0:= TURRET_Y_DPT_START;
+    while(_RT0 <= TURRET_Y_DPT_END){
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, TURRET_DPT_GUN, TURRET_X_DPT, _RT0, 2, LOGO_3, "", 0, 200, VEFF_TELEPORT, 1,1);
+        _RT0:= _RT0 + 1;
+    }
+    
+    // Create GAS_SHELL_LAUNCHERs at fixed position (y: 108-113)
+    _RT0:= TURRET_Y_GAS_START;
+    while(_RT0 <= TURRET_Y_GAS_END){
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, TURRET_GAS_SHELL_LAUNCHER, TURRET_X_GAS, _RT0, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        _RT0:= _RT0 + 1;
+    }
+    
+    // Create ION_REFLECTORs at fixed position (y: 107-114)
+    _RT0:= TURRET_Y_ION_START;
+    while(_RT0 <= TURRET_Y_ION_END){
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, TURRET_ION_REFLECTOR, TURRET_X_ION, _RT0, 3, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        _RT0:= _RT0 + 1;
+    }
+}
+*/
+
+// Create random turrets after 5 seconds (x: 126-132 and 127-133, y: 67 and 66)
+Event(getOwnTime() > 5){
+    _RT0:= 0;
+    while(_RT0 < 7){
+        _RT1:= GetRnd(1, 5);
+        
+        // Determine turret type based on random value
+        if(_RT1 == 1) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 2) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 3) {_RT2:= TURRET_GAS_SHELL_LAUNCHER;}
+        if(_RT1 == 4) {_RT2:= TURRET_ION_REFLECTOR;}
+        if(_RT1 == 5) {_RT2:= TURRET_PARCHER;}
+        
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 126 + _RT0, 67, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 127 + _RT0 + _RT1, 66, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        
+        _RT0:= _RT0 + 1;
+    }
+}
+
+// Create random turrets after 8 seconds (x: 100-106, y: 69 and 68)
+Event(getOwnTime() > 8){
+    _RT0:= 0;
+    while(_RT0 < 7){
+        _RT1:= GetRnd(1, 5);
+        
+        // Determine turret type based on random value
+        if(_RT1 == 1) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 2) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 3) {_RT2:= TURRET_GAS_SHELL_LAUNCHER;}
+        if(_RT1 == 4) {_RT2:= TURRET_ION_REFLECTOR;}
+        if(_RT1 == 5) {_RT2:= TURRET_PARCHER;}
+        
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 100 + _RT0, 69, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 100 + _RT0 + _RT1, 68, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        
+        _RT0:= _RT0 + 1;
+    }
+}
+
+// Create random turrets after 9 seconds (x: 65 and 64, y: 129-135)
+Event(getOwnTime() > 9){
+    _RT0:= 0;
+    while(_RT0 < 7){
+        _RT1:= GetRnd(1, 5);
+        
+        // Determine turret type based on random value
+        if(_RT1 == 1) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 2) {_RT2:= TURRET_DPT_GUN;}
+        if(_RT1 == 3) {_RT2:= TURRET_GAS_SHELL_LAUNCHER;}
+        if(_RT1 == 4) {_RT2:= TURRET_ION_REFLECTOR;}
+        if(_RT1 == 5) {_RT2:= TURRET_PARCHER;}
+    
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 65, 129 + _RT0, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        ActCreatePlObj(PLAYER_3, AIREL_MYSELF, _RT2, 64, 129 + _RT0 + _RT1, 1, LOGO_3, "", 0, 100, VEFF_TELEPORT, 1,1);
+        
+        _RT0:= _RT0 + 1;
+    }
+}

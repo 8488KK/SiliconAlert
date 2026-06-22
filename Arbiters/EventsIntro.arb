@@ -1,0 +1,149 @@
+    Event(TRUE) {
+
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _inttostr(IsPlPresent(4)));
+
+        //ActSetScreen(PLAYER_1, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
+        //ActSetScreen(PLAYER_4, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
+       // ActSetScreen(PLAYER_7, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
+
+        ActClearStrRes(PLAYER_1, AIREL_MYSELF);
+        ActClearStrRes(PLAYER_4, AIREL_MYSELF);
+        ActClearStrRes(PLAYER_7, AIREL_MYSELF);
+
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 0, INTRO_TURELS0);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 1, INTRO_TURELS1);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 2, INTRO_TURELS2);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 3, INTRO_TURELS3);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 4, INTRO_TURELS4);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 5, INTRO_TURELS5);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 6, INTRO_TURELS6);
+
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 7, INTRO_SHARK_TEXT0);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 8, INTRO_SHARK_TEXT1);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 9, INTRO_SHARK_TEXT2);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 10, INTRO_SHARK_TEXT3);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 11, INTRO_SHARK_TEXT4);
+
+
+        //ActBldObj(PLAYER_1, AIREL_MYSELF, BO_FLAGSHIP, FALSE);
+        //ActBldObj(PLAYER_5, AIREL_MYSELF, WS_FLAGSHIP, FALSE);
+        //ActBldObj(PLAYER_7, AIREL_MYSELF, BO_FLAGSHIP, FALSE);
+
+        //ActBldObj(PLAYER_1, AIREL_MYSELF, SUBCENTER, TRUE);
+        //ActTechSetAll(PLAYER_5, AIREL_MYSELF);
+        //ActTechDevEnableAll(PLAYER_1, AIREL_MYSELF);
+        
+        //ActTechDevEnable(PLAYER_1, AIREL_MYSELF, TTECH_WS_HYDRO_FUSION_TECHNOLOGY);
+    }
+    
+    Event(getOwnTime() > 1) {
+
+        ActCreatePlObj(PLAYER_5, AIREL_MYSELF, HF_CANNON, 83, 110, 1, LOGO_5, "INTRO", 0, 100);
+        ActCreatePlObj(PLAYER_5, AIREL_MYSELF, AIR_EXTRACTOR, 84, 109, 1, LOGO_5, "INTRO", 0, 100);
+        ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SHARK_CONTROL, 84, 111, 1, LOGO_5, "INTRO", 0, 100);
+        ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SONAR, 86, 111, 1, LOGO_5, "INTRO", 0, 100);
+           
+        //ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL");
+        //ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL");
+        //ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TUREL");
+        //ActTechSet(PLAYER_5, AIREL_MYSELF, TTECH_WS_UPGRADE_HF_CANNON_FIRE_RATE);
+
+        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL1");
+
+    }
+    
+    EventPlObjAttacked(_PS1 == "INTRO" && _PI13 == HF_CANNON && getOwnTime() > 51)
+    {
+        //ActStringMess(PLAYER_1, AIREL_MYSELF,"TuRell kill SI bug");
+
+        // Уничтожаем объект игрока, который был атакован Soliton
+        // Используем параметры атакованного объекта из события
+        if (_PI0 == PLAYER_3) {
+            ActDelPlObjEx(_PI0, AIREL_MYSELF, AITRG_ALL, _PI3, _PI4, _PS0, _PI5, _PI6, _PI7, 1, 1, 1, VEFF_EXPLOSION);
+        }
+        // Чтобы событие оставалось активным после срабатывания:
+        ActLockEvent();
+    };
+
+    Event(getOwnTime() > 56) {
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+       ActSetScreen(PLAYER_7, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+    }
+
+    /*
+
+   Event(getOwnTime() > 0) {
+        ActCreateFleet(PLAYER_1, AIREL_MYSELF, "fleetPl1", CIV_BO, AISF_ALL);
+        ActObjSelectN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1);
+        ActAddFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1,"fleetPl1"));
+        ActLockFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1,"fleetPl1"), LOCKOBJ_INTERF );
+
+        ActCreateFleet(PLAYER_5, AIREL_MYSELF, "fleetPl5", CIV_WS, AISF_ALL);
+        ActObjSelectN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER5);
+        ActAddFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fleetPl5"));
+        ActLockFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fleetPl5"), LOCKOBJ_INTERF );
+
+        ActCreateFleet(PLAYER_7, AIREL_MYSELF, "fleetPl7", CIV_BO, AISF_ALL);
+        ActObjSelectN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER7);
+        ActAddFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"));
+        ActLockFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"), LOCKOBJ_INTERF );
+    }
+
+    Event(getOwnTime() > 2) {
+
+        ActClearStrRes(PLAYER_1, AIREL_MYSELF);
+        ActClearStrRes(PLAYER_5, AIREL_MYSELF);
+        ActClearStrRes(PLAYER_7, AIREL_MYSELF);
+
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 1, INTRO_TEXT1);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 2, INTRO_TEXT2);
+        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 3, INTRO_TEXT3);
+
+        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 1, INTRO_TEXT1);
+        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 2, INTRO_TEXT2);
+        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 3, INTRO_TEXT3);
+
+        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 1, INTRO_TEXT1);
+        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 2, INTRO_TEXT2);
+        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 3, INTRO_TEXT3);
+
+        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_ATTACK");
+        ActPlayBriefing(PLAYER_5, AIREL_MYSELF, "INTRO_ATTACK");
+        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_ATTACK");
+    };
+
+    Event(getOwnTime() > 11){
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "SHOW ACTION");
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_SOFT);
+        ActSetScreen(PLAYER_5, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_SOFT);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_SOFT);
+    }
+
+    EventBriefing(_PS0 == "INTRO_ATTACK")
+    {
+        //ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_ATTACK1");
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "END INTRO1");
+        //ActAddStrRes(PLAYER_5, AIREL_MYSELF, 1, PLAYER5_NAME + TEXT_INFO_CREATE_ART_1 + TEXT_INFO_EAST + PLAYER0_SILICOID_ALPHA_NAME + TEXT_INFO_CREATE_ART_2);
+    };
+
+    Event(getOwnTime() > 31){
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, START_POS_X_PL1, START_POS_Y_PL1, SCROLL_SOFT);
+        ActSetScreen(PLAYER_5, AIREL_MYSELF, START_POS_X_PL5, START_POS_Y_PL5, SCROLL_SOFT);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, START_POS_X_PL7, START_POS_Y_PL7, SCROLL_SOFT);
+
+        ActObjSelectN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1);
+        ActAddFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1,"fleetPl1"));
+        ActUnLockFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1,"fleetPl1"), LOCKOBJ_ALL);
+
+        ActObjSelectN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER5);
+        ActAddFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fleetPl5"));
+        ActUnLockFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fleetPl5"), LOCKOBJ_ALL);
+
+        ActObjSelectN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER7);
+        ActAddFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"));
+        ActUnLockFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"), LOCKOBJ_ALL);
+    }
+
+    */
+ 

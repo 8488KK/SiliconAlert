@@ -1,0 +1,35 @@
+        // set timer missions
+        Event(getOwnTime() > 59, 2) {
+
+            ActOnTimer(PLAYER_1, AIREL_MYSELF, MAIN_TIMER_TIME);
+            ActOnTimer(PLAYER_5, AIREL_MYSELF, MAIN_TIMER_TIME);
+            ActOnTimer(PLAYER_7, AIREL_MYSELF, MAIN_TIMER_TIME);
+
+            ActTimerOnScreen(PLAYER_1, AIREL_MYSELF, TRUE);
+            ActTimerOnScreen(PLAYER_5, AIREL_MYSELF, TRUE);
+            ActTimerOnScreen(PLAYER_7, AIREL_MYSELF, TRUE);
+
+            //ActOnEvent(PLAYER_1, AIREL_MYSELF, 3);
+            //ActOnEvent(PLAYER_5, AIREL_MYSELF, 3);
+            //ActOnEvent(PLAYER_7, AIREL_MYSELF, 3);
+        };
+
+        /*
+        Event(GetTimerTime(PLAYER_1) == END_TIMER_TIME || 
+              GetTimerTime(PLAYER_5) == END_TIMER_TIME || 
+              GetTimerTime(PLAYER_7) == END_TIMER_TIME, 3){
+            ActEndMiss(PLAYER_1, AIREL_MYSELF, ENDMISS_FAILED);
+            ActTotalStatistics(PLAYER_1, AIREL_MYSELF, 2);
+            ActEpilogue(PLAYER_1, AIREL_MYSELF, 1, "ep1");
+
+            ActEndMiss(PLAYER_5, AIREL_MYSELF, ENDMISS_FAILED);
+            ActTotalStatistics(PLAYER_5, AIREL_MYSELF, 2);
+            ActEpilogue(PLAYER_5, AIREL_MYSELF, 1, "ep1");
+
+            ActEndMiss(PLAYER_7, AIREL_MYSELF, ENDMISS_FAILED);
+            ActTotalStatistics(PLAYER_7, AIREL_MYSELF, 2);
+            ActEpilogue(PLAYER_7, AIREL_MYSELF, 1, "ep1");
+
+            ActLockEvent();
+        }
+        */

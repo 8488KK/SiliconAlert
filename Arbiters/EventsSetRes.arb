@@ -1,0 +1,7 @@
+        // set SI Resource and technology
+        Event(getOwnTime() > 100, 1) {
+            ActTechSetAll(PLAYER_3, AIREL_MYSELF);
+            ActSetPlRC(PLAYER_3, AIREL_MYSELF, ENERGY, 0, 3000000);
+            ActSetPlRC(PLAYER_3, AIREL_MYSELF, SILICON, 0, 3000000);
+            ActSetPlRC(PLAYER_3, AIREL_MYSELF, CORIUM, 0, 3000000);
+        };

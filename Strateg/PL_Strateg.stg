@@ -1,0 +1,14 @@
+include<[_inc_path]\AiScript.dfn>;
+include<[_inc_path]\AiScript.mcr>;
+
+OpenStrateg("stg", CIV_WS, "PL");
+    OpenEvents();
+
+    EventInit(TRUE){
+        ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _PS0);
+        ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _PI0);
+        ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _PI1);
+        ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _PI2);
+    }
+	CloseEvents();
+CloseStrateg();

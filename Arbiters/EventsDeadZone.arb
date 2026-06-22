@@ -1,0 +1,110 @@
+    Event(IsPlObjExist(PLAYER_3, "CORE1") || IsPlObjExist(PLAYER_3, "CORE2")) {
+
+        // ActStringMess(PLAYER_1, AIREL_MYSELF, "Obj = " + _inttostr(GetPlObjN(PLAYER_1, AIREL_MYSELF, "Player_1", LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 1, 7, 7, 1)));
+
+        // ActStringMess(PLAYER_1, AIREL_MYSELF, "Obj = " + _inttostr(GetPlObjN(PLAYER_1, AIREL_MYSELF, "Player_1", LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 2, 7, 7, 2)));
+
+        // ActStringMess(PLAYER_1, AIREL_MYSELF, "Obj = " + _inttostr(GetPlObjN(PLAYER_1, AIREL_MYSELF, "Player_1", LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 3, 7, 7, 3)));
+
+        // ActStringMess(PLAYER_1, AIREL_MYSELF, "Obj = " + _inttostr(GetPlObjN(PLAYER_1, AIREL_MYSELF, "Player_1", LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 4, 7, 7, 4)));
+
+        
+        if(GetPlObjN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1) > 0 ||
+            GetPlObjN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2) > 0 ||
+            GetPlObjN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3) > 0 ||
+            GetPlObjN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4) > 0) {
+            ActDelPlObjEx(PLAYER_1, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_1, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_1, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_1, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4, VEFF_EXPLOSION);
+        }
+
+        if(GetPlObjN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1) > 0 ||
+            GetPlObjN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2) > 0 ||
+            GetPlObjN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3) > 0 ||
+            GetPlObjN(PLAYER_5, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4) > 0) {
+            ActDelPlObjEx(PLAYER_5, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_5, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_5, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_5, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4, VEFF_EXPLOSION);
+        }
+
+        if(GetPlObjN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1) > 0 ||
+            GetPlObjN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2) > 0 ||
+            GetPlObjN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3) > 0 ||
+            GetPlObjN(PLAYER_7, AIREL_MYSELF, UNIT_NAME_PLAYER1, LOGO_1 ,DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4) > 0) {
+            ActDelPlObjEx(PLAYER_7, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 1, DEAD_ZONE_LX, DEAD_ZONE_LY, 1, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_7, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 2, DEAD_ZONE_LX, DEAD_ZONE_LY, 2, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_7, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 3, DEAD_ZONE_LX, DEAD_ZONE_LY, 3, VEFF_EXPLOSION);
+            ActDelPlObjEx(PLAYER_7, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_1, UNIT_NAME_PLAYER1, DEAD_ZONE_X, DEAD_ZONE_Y, 4, DEAD_ZONE_LX, DEAD_ZONE_LY, 4, VEFF_EXPLOSION);
+        }
+        ActLockEvent();
+    };
+
+/*
+    // Событие для отображения периметра на мини-карте
+    Event(TRUE) // Срабатывает в первый игровой тик
+    {
+        // Используем локальные переменные для хранения состояния
+        // _RT0 - текущий этап (0: верх, 1: право, 2: низ, 3: лево)
+        // _RT1 - текущая x координата
+        // _RT2 - текущая y координата
+        
+        // Инициализация
+        if (_PI32 == 0)
+        {
+            _RT0:= 0; // Начинаем с верхней линии
+            _RT1:= 1; // Начальная x
+            _RT2:= 1; // Начальная y
+        }
+        
+        // Показываем маркер для текущей позиции
+        ActShowMapAction(PLAYER_1, AIREL_MYSELF, RMAP_RED, _RT1, _RT2);
+        
+        // Обновляем координаты для следующего тика
+        if (_RT0 == 0) // Верхняя линия: движение по Y от 1 до 50
+        {
+            if (_RT2 < 50)
+            {
+                _RT2:= _RT2 + 1;
+            }
+            else
+            {
+                _RT0:= 1; // Переход к правой линии
+                _RT1:= 2;   // Начинаем с x=2 (x=1 уже отмечен)
+            }
+        }
+        if (_RT0 == 1) // Правая линия: движение по X от 2 до 50
+        {
+            if (_RT1 < 50)
+            {
+                _RT1:= _RT1 + 1;
+            }
+            else
+            {
+                _RT0:= 2; // Переход к нижней линии
+                _RT2:= 49;  // Начинаем с y=49 (y=50 уже отмечен)
+            }
+        }
+        if (_RT0 == 2) // Нижняя линия: движение по Y от 49 до 1
+        {
+            if (_RT2 > 1)
+            {
+                _RT2:= _RT2 - 1;
+            }
+            else
+            {
+                _RT0:= 3; // Переход к левой линии
+                _RT1:= 49;  // Начинаем с x=49 (x=50 и x=1 уже отмечены)
+            }
+        }
+        if (_RT0 == 3) // Левая линия: движение по X от 49 до 2
+        {
+            if (_RT1 > 2)
+            {
+                _RT1:= _RT1 - 1;
+            }
+        }
+        ActLockEvent();
+    };
+    */

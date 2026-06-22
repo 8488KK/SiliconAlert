@@ -1,0 +1,73 @@
+MAIN_TIMER_TIME = 40*60;
+END_TIMER_TIME = 0;
+
+INTRO_TURELS0 = "Квадрат сигма-11. Научно-исследовательская станция \"НИС-8\". Пост охраны \"ГП1\". Местное время 17:43 ";
+INTRO_TURELS1 = "ПУНКТ УПРАВЛЕНИЯ ГИДРОПУШКИ";
+INTRO_TURELS2 = "Джимми: \"Я уже запарился тут сидеть, когда наша смена закончится?\"";
+INTRO_TURELS3 = "Рик: \"Не ной, осталось... Опа! Смотри, это же энерджайзер силикоидов. Что он тут делает?\"";
+INTRO_TURELS4 = "Джимми: \"Чё, где!? Дай-ка я по нему ЖАХНУ!\"";
+INTRO_TURELS5 = "Рик: \"Хороший выстрел, Джимми.\"";
+INTRO_TURELS6 = "Джимми: \"Хе-хе-хе...\"";
+
+INTRO_SHARK_TEXT0 = "ПУНКТ УПРАВЛЕНИЯ ПСИ-ЦЕНТРОМ";
+INTRO_SHARK_TEXT1 = "Пит: Что это за звуки?";
+INTRO_SHARK_TEXT2 = "Джон: Да опять Джимми и Рик по акулам стреляют, не обращай внимание.";
+INTRO_SHARK_TEXT3 = "Пит: Пфф, дети. Джон, пришли ли отчеты о наблюдении за акулами из северной части Сердца океана?";
+INTRO_SHARK_TEXT4 = "Джон: Да, Пит, вот они, дер... Какого...!";
+
+
+START_POS_X_PL1 = 101;
+START_POS_Y_PL1 = 133;
+
+START_POS_X_PL5 = 112;
+START_POS_Y_PL5 = 110;
+
+START_POS_X_PL7 = 131;
+START_POS_Y_PL7 = 103;
+
+INTRO_SCREEN_X = 84;
+INTRO_SCREEN_Y = 111;
+
+UNIT_NAME_PLAYER1 = "Player_1";
+UNIT_NAME_PLAYER5 = "Player_5";
+UNIT_NAME_PLAYER7 = "Player_7";
+
+DEAD_ZONE_X = 104;
+DEAD_ZONE_Y = 120;
+
+DEAD_ZONE_LX = 7;
+DEAD_ZONE_LY = 7;
+
+//----------------------------------------
+TRACK_LEFT_X1 = 36;
+TRACK_LEFT_Y1 = 120;
+TRACK_LEFT_Z1 = 3;
+
+TRACK_LEFT_X2 = 52;
+TRACK_LEFT_Y2 = 132;
+TRACK_LEFT_Z2 = 3;
+
+TRACK_LEFT_X3 = 100;
+TRACK_LEFT_Y3 = 132;
+TRACK_LEFT_Z3 = 3;
+
+TRACK_LEFT_X4 = 99;
+TRACK_LEFT_Y4 = 121;
+TRACK_LEFT_Z4 = 3;
+//----------------------------------------
+
+TRACK_RIGHT_X1 = 133;
+TRACK_RIGHT_Y1 = 40;
+TRACK_RIGHT_Z1 = 3;
+
+TRACK_RIGHT_X2 = 132;
+TRACK_RIGHT_Y2 = 57;
+TRACK_RIGHT_Z2 = 3;
+
+TRACK_RIGHT_X3 = 30;
+TRACK_RIGHT_Y3 = 100;
+TRACK_RIGHT_Z3 = 3;
+
+TRACK_RIGHT_X4 = 117;
+TRACK_RIGHT_Y4 = 85;
+TRACK_RIGHT_Z4 = 3;

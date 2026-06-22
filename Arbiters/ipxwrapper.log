@@ -1,0 +1,576 @@
+[37956.90, thread 20824] IPXWrapper 0.6.1
+[37956.90, thread 20824] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[37956.92, thread 20824] --
+[37956.92, thread 20824] Listing IP interfaces:
+[37956.93, thread 20824] --
+[37956.93, thread 20824] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[37956.95, thread 20824] Description:   Realtek Gaming 2.5GbE Family Controller
+[37956.95, thread 20824] AddressLength: 6
+[37956.95, thread 20824] Address:       A0:36:BC:67:89:32
+[37956.96, thread 20824] Index:         17
+[37956.96, thread 20824] Type:          6
+[37956.98, thread 20824] DhcpEnabled:   1
+[37956.98, thread 20824] IpAddress:     192.168.1.92
+[37956.98, thread 20824] IpMask:        255.255.255.0
+[37956.98, thread 20824] --
+[37956.98, thread 20824] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[37956.98, thread 20824] Description:   Famatech Radmin VPN Ethernet Adapter
+[37956.98, thread 20824] AddressLength: 6
+[37956.98, thread 20824] Address:       02:50:46:C4:D3:D4
+[37956.98, thread 20824] Index:         21
+[37956.98, thread 20824] Type:          6
+[37956.98, thread 20824] DhcpEnabled:   0
+[37956.98, thread 20824] IpAddress:     26.93.55.201
+[37956.98, thread 20824] IpMask:        255.0.0.0
+[37956.98, thread 20824] --
+[37956.98, thread 20824] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[37956.98, thread 20824] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[37956.98, thread 20824] AddressLength: 6
+[37956.98, thread 20824] Address:       B0:3C:DC:8B:15:69
+[37956.98, thread 20824] Index:         9
+[37956.98, thread 20824] Type:          71
+[37956.98, thread 20824] DhcpEnabled:   1
+[37956.98, thread 20824] IpAddress:     0.0.0.0
+[37956.98, thread 20824] IpMask:        0.0.0.0
+[37956.98, thread 20824] --
+[37956.98, thread 20824] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[37956.98, thread 20824] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[37956.98, thread 20824] AddressLength: 6
+[37956.98, thread 20824] Address:       B0:3C:DC:8B:15:6A
+[37956.98, thread 20824] Index:         4
+[37956.98, thread 20824] Type:          71
+[37956.98, thread 20824] DhcpEnabled:   1
+[37956.98, thread 20824] IpAddress:     0.0.0.0
+[37956.98, thread 20824] IpMask:        0.0.0.0
+[37956.98, thread 20824] --
+[37956.98, thread 20824] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[37956.98, thread 20824] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[37956.98, thread 20824] AddressLength: 6
+[37956.98, thread 20824] Address:       B2:3C:DC:8B:15:69
+[37957.00, thread 20824] Index:         7
+[37957.00, thread 20824] Type:          71
+[37957.00, thread 20824] DhcpEnabled:   1
+[37957.00, thread 20824] IpAddress:     0.0.0.0
+[37957.00, thread 20824] IpMask:        0.0.0.0
+[37957.00, thread 20824] --
+[37957.00, thread 20824] Listing IPX interfaces:
+[37957.00, thread 20824] --
+[37957.00, thread 20824] Network:    00:00:00:01
+[37957.00, thread 20824] Node:       9E:4A:02:DC:BC:A7
+[37957.00, thread 20824] IP address: 192.168.1.92
+[37957.00, thread 20824] Netmask:    255.255.255.0
+[37957.00, thread 20824] Broadcast:  192.168.1.255
+[37957.00, thread 20824] IP address: 26.93.55.201
+[37957.00, thread 20824] Netmask:    255.0.0.0
+[37957.00, thread 20824] Broadcast:  26.255.255.255
+[37957.00, thread 20824] --
+[37957.00, thread 20824] Network:    00:00:00:01
+[37957.00, thread 20824] Node:       02:50:46:C4:D3:D4
+[37957.00, thread 20824] IP address: 26.93.55.201
+[37957.00, thread 20824] Netmask:    255.0.0.0
+[37957.00, thread 20824] Broadcast:  26.255.255.255
+[37957.00, thread 20824] --
+[38745.46, thread 18168] IPXWrapper 0.6.1
+[38745.46, thread 18168] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[38745.46, thread 18168] --
+[38745.48, thread 18168] Listing IP interfaces:
+[38745.48, thread 18168] --
+[38745.48, thread 18168] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[38745.48, thread 18168] Description:   Realtek Gaming 2.5GbE Family Controller
+[38745.48, thread 18168] AddressLength: 6
+[38745.48, thread 18168] Address:       A0:36:BC:67:89:32
+[38745.48, thread 18168] Index:         17
+[38745.48, thread 18168] Type:          6
+[38745.48, thread 18168] DhcpEnabled:   1
+[38745.48, thread 18168] IpAddress:     192.168.1.92
+[38745.48, thread 18168] IpMask:        255.255.255.0
+[38745.48, thread 18168] --
+[38745.48, thread 18168] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[38745.48, thread 18168] Description:   Famatech Radmin VPN Ethernet Adapter
+[38745.48, thread 18168] AddressLength: 6
+[38745.48, thread 18168] Address:       02:50:46:C4:D3:D4
+[38745.48, thread 18168] Index:         21
+[38745.48, thread 18168] Type:          6
+[38745.48, thread 18168] DhcpEnabled:   0
+[38745.48, thread 18168] IpAddress:     26.93.55.201
+[38745.48, thread 18168] IpMask:        255.0.0.0
+[38745.48, thread 18168] --
+[38745.48, thread 18168] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[38745.48, thread 18168] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[38745.48, thread 18168] AddressLength: 6
+[38745.48, thread 18168] Address:       B0:3C:DC:8B:15:69
+[38745.48, thread 18168] Index:         9
+[38745.48, thread 18168] Type:          71
+[38745.48, thread 18168] DhcpEnabled:   1
+[38745.48, thread 18168] IpAddress:     0.0.0.0
+[38745.48, thread 18168] IpMask:        0.0.0.0
+[38745.48, thread 18168] --
+[38745.48, thread 18168] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[38745.48, thread 18168] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[38745.48, thread 18168] AddressLength: 6
+[38745.48, thread 18168] Address:       B0:3C:DC:8B:15:6A
+[38745.48, thread 18168] Index:         4
+[38745.48, thread 18168] Type:          71
+[38745.48, thread 18168] DhcpEnabled:   1
+[38745.48, thread 18168] IpAddress:     0.0.0.0
+[38745.48, thread 18168] IpMask:        0.0.0.0
+[38745.48, thread 18168] --
+[38745.48, thread 18168] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[38745.48, thread 18168] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[38745.48, thread 18168] AddressLength: 6
+[38745.48, thread 18168] Address:       B2:3C:DC:8B:15:69
+[38745.48, thread 18168] Index:         7
+[38745.48, thread 18168] Type:          71
+[38745.48, thread 18168] DhcpEnabled:   1
+[38745.48, thread 18168] IpAddress:     0.0.0.0
+[38745.48, thread 18168] IpMask:        0.0.0.0
+[38745.48, thread 18168] --
+[38745.48, thread 18168] Listing IPX interfaces:
+[38745.48, thread 18168] --
+[38745.50, thread 18168] Network:    00:00:00:01
+[38745.50, thread 18168] Node:       9E:4A:02:DC:BC:A7
+[38745.50, thread 18168] IP address: 192.168.1.92
+[38745.50, thread 18168] Netmask:    255.255.255.0
+[38745.50, thread 18168] Broadcast:  192.168.1.255
+[38745.50, thread 18168] IP address: 26.93.55.201
+[38745.50, thread 18168] Netmask:    255.0.0.0
+[38745.50, thread 18168] Broadcast:  26.255.255.255
+[38745.50, thread 18168] --
+[38745.50, thread 18168] Network:    00:00:00:01
+[38745.50, thread 18168] Node:       02:50:46:C4:D3:D4
+[38745.50, thread 18168] IP address: 26.93.55.201
+[38745.50, thread 18168] Netmask:    255.0.0.0
+[38745.50, thread 18168] Broadcast:  26.255.255.255
+[38745.50, thread 18168] --
+[1206.62, thread 19856] IPXWrapper 0.6.1
+[1206.62, thread 19856] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[1206.62, thread 19856] --
+[1206.62, thread 19856] Listing IP interfaces:
+[1206.62, thread 19856] --
+[1206.62, thread 19856] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[1206.62, thread 19856] Description:   Realtek Gaming 2.5GbE Family Controller
+[1206.62, thread 19856] AddressLength: 6
+[1206.62, thread 19856] Address:       A0:36:BC:67:89:32
+[1206.62, thread 19856] Index:         17
+[1206.62, thread 19856] Type:          6
+[1206.62, thread 19856] DhcpEnabled:   1
+[1206.64, thread 19856] IpAddress:     192.168.1.92
+[1206.64, thread 19856] IpMask:        255.255.255.0
+[1206.64, thread 19856] --
+[1206.64, thread 19856] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[1206.64, thread 19856] Description:   Famatech Radmin VPN Ethernet Adapter
+[1206.64, thread 19856] AddressLength: 6
+[1206.64, thread 19856] Address:       02:50:46:C4:D3:D4
+[1206.64, thread 19856] Index:         21
+[1206.64, thread 19856] Type:          6
+[1206.64, thread 19856] DhcpEnabled:   0
+[1206.64, thread 19856] IpAddress:     26.93.55.201
+[1206.64, thread 19856] IpMask:        255.0.0.0
+[1206.64, thread 19856] --
+[1206.64, thread 19856] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[1206.64, thread 19856] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[1206.64, thread 19856] AddressLength: 6
+[1206.64, thread 19856] Address:       B0:3C:DC:8B:15:69
+[1206.64, thread 19856] Index:         9
+[1206.64, thread 19856] Type:          71
+[1206.64, thread 19856] DhcpEnabled:   1
+[1206.64, thread 19856] IpAddress:     0.0.0.0
+[1206.64, thread 19856] IpMask:        0.0.0.0
+[1206.64, thread 19856] --
+[1206.64, thread 19856] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[1206.64, thread 19856] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[1206.64, thread 19856] AddressLength: 6
+[1206.64, thread 19856] Address:       B0:3C:DC:8B:15:6A
+[1206.64, thread 19856] Index:         4
+[1206.64, thread 19856] Type:          71
+[1206.64, thread 19856] DhcpEnabled:   1
+[1206.64, thread 19856] IpAddress:     0.0.0.0
+[1206.64, thread 19856] IpMask:        0.0.0.0
+[1206.64, thread 19856] --
+[1206.64, thread 19856] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[1206.64, thread 19856] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[1206.64, thread 19856] AddressLength: 6
+[1206.64, thread 19856] Address:       B2:3C:DC:8B:15:69
+[1206.64, thread 19856] Index:         7
+[1206.64, thread 19856] Type:          71
+[1206.64, thread 19856] DhcpEnabled:   1
+[1206.64, thread 19856] IpAddress:     0.0.0.0
+[1206.64, thread 19856] IpMask:        0.0.0.0
+[1206.64, thread 19856] --
+[1206.64, thread 19856] Listing IPX interfaces:
+[1206.64, thread 19856] --
+[1206.64, thread 19856] Network:    00:00:00:01
+[1206.64, thread 19856] Node:       9E:4A:02:DC:BC:A7
+[1206.65, thread 19856] IP address: 192.168.1.92
+[1206.65, thread 19856] Netmask:    255.255.255.0
+[1206.65, thread 19856] Broadcast:  192.168.1.255
+[1206.65, thread 19856] IP address: 26.93.55.201
+[1206.65, thread 19856] Netmask:    255.0.0.0
+[1206.65, thread 19856] Broadcast:  26.255.255.255
+[1206.65, thread 19856] --
+[1206.65, thread 19856] Network:    00:00:00:01
+[1206.65, thread 19856] Node:       02:50:46:C4:D3:D4
+[1206.65, thread 19856] IP address: 26.93.55.201
+[1206.65, thread 19856] Netmask:    255.0.0.0
+[1206.65, thread 19856] Broadcast:  26.255.255.255
+[1206.65, thread 19856] --
+[1271.90, thread 8296] IPXWrapper 0.6.1
+[1271.90, thread 8296] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[1271.90, thread 8296] --
+[1271.90, thread 8296] Listing IP interfaces:
+[1271.90, thread 8296] --
+[1271.90, thread 8296] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[1271.90, thread 8296] Description:   Realtek Gaming 2.5GbE Family Controller
+[1271.90, thread 8296] AddressLength: 6
+[1271.90, thread 8296] Address:       A0:36:BC:67:89:32
+[1271.90, thread 8296] Index:         17
+[1271.92, thread 8296] Type:          6
+[1271.92, thread 8296] DhcpEnabled:   1
+[1271.92, thread 8296] IpAddress:     192.168.1.92
+[1271.92, thread 8296] IpMask:        255.255.255.0
+[1271.92, thread 8296] --
+[1271.92, thread 8296] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[1271.92, thread 8296] Description:   Famatech Radmin VPN Ethernet Adapter
+[1271.92, thread 8296] AddressLength: 6
+[1271.92, thread 8296] Address:       02:50:46:C4:D3:D4
+[1271.92, thread 8296] Index:         21
+[1271.92, thread 8296] Type:          6
+[1271.92, thread 8296] DhcpEnabled:   0
+[1271.92, thread 8296] IpAddress:     26.93.55.201
+[1271.92, thread 8296] IpMask:        255.0.0.0
+[1271.92, thread 8296] --
+[1271.92, thread 8296] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[1271.92, thread 8296] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[1271.92, thread 8296] AddressLength: 6
+[1271.92, thread 8296] Address:       B0:3C:DC:8B:15:69
+[1271.92, thread 8296] Index:         9
+[1271.92, thread 8296] Type:          71
+[1271.92, thread 8296] DhcpEnabled:   1
+[1271.92, thread 8296] IpAddress:     0.0.0.0
+[1271.92, thread 8296] IpMask:        0.0.0.0
+[1271.92, thread 8296] --
+[1271.92, thread 8296] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[1271.92, thread 8296] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[1271.92, thread 8296] AddressLength: 6
+[1271.92, thread 8296] Address:       B0:3C:DC:8B:15:6A
+[1271.92, thread 8296] Index:         4
+[1271.92, thread 8296] Type:          71
+[1271.92, thread 8296] DhcpEnabled:   1
+[1271.92, thread 8296] IpAddress:     0.0.0.0
+[1271.92, thread 8296] IpMask:        0.0.0.0
+[1271.92, thread 8296] --
+[1271.92, thread 8296] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[1271.92, thread 8296] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[1271.92, thread 8296] AddressLength: 6
+[1271.92, thread 8296] Address:       B2:3C:DC:8B:15:69
+[1271.92, thread 8296] Index:         7
+[1271.92, thread 8296] Type:          71
+[1271.92, thread 8296] DhcpEnabled:   1
+[1271.92, thread 8296] IpAddress:     0.0.0.0
+[1271.92, thread 8296] IpMask:        0.0.0.0
+[1271.92, thread 8296] --
+[1271.92, thread 8296] Listing IPX interfaces:
+[1271.92, thread 8296] --
+[1271.92, thread 8296] Network:    00:00:00:01
+[1271.92, thread 8296] Node:       9E:4A:02:DC:BC:A7
+[1271.92, thread 8296] IP address: 192.168.1.92
+[1271.93, thread 8296] Netmask:    255.255.255.0
+[1271.93, thread 8296] Broadcast:  192.168.1.255
+[1271.93, thread 8296] IP address: 26.93.55.201
+[1271.93, thread 8296] Netmask:    255.0.0.0
+[1271.93, thread 8296] Broadcast:  26.255.255.255
+[1271.93, thread 8296] --
+[1271.93, thread 8296] Network:    00:00:00:01
+[1271.93, thread 8296] Node:       02:50:46:C4:D3:D4
+[1271.93, thread 8296] IP address: 26.93.55.201
+[1271.93, thread 8296] Netmask:    255.0.0.0
+[1271.93, thread 8296] Broadcast:  26.255.255.255
+[1271.93, thread 8296] --
+[2439.10, thread 21216] IPXWrapper 0.6.1
+[2439.12, thread 21216] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[2439.12, thread 21216] --
+[2439.12, thread 21216] Listing IP interfaces:
+[2439.12, thread 21216] --
+[2439.12, thread 21216] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[2439.12, thread 21216] Description:   Realtek Gaming 2.5GbE Family Controller
+[2439.12, thread 21216] AddressLength: 6
+[2439.12, thread 21216] Address:       A0:36:BC:67:89:32
+[2439.12, thread 21216] Index:         17
+[2439.12, thread 21216] Type:          6
+[2439.12, thread 21216] DhcpEnabled:   1
+[2439.12, thread 21216] IpAddress:     192.168.1.92
+[2439.12, thread 21216] IpMask:        255.255.255.0
+[2439.12, thread 21216] --
+[2439.12, thread 21216] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[2439.12, thread 21216] Description:   Famatech Radmin VPN Ethernet Adapter
+[2439.12, thread 21216] AddressLength: 6
+[2439.12, thread 21216] Address:       02:50:46:C4:D3:D4
+[2439.12, thread 21216] Index:         21
+[2439.12, thread 21216] Type:          6
+[2439.12, thread 21216] DhcpEnabled:   0
+[2439.12, thread 21216] IpAddress:     26.93.55.201
+[2439.12, thread 21216] IpMask:        255.0.0.0
+[2439.12, thread 21216] --
+[2439.12, thread 21216] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[2439.12, thread 21216] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[2439.12, thread 21216] AddressLength: 6
+[2439.12, thread 21216] Address:       B0:3C:DC:8B:15:69
+[2439.12, thread 21216] Index:         9
+[2439.12, thread 21216] Type:          71
+[2439.12, thread 21216] DhcpEnabled:   1
+[2439.12, thread 21216] IpAddress:     0.0.0.0
+[2439.12, thread 21216] IpMask:        0.0.0.0
+[2439.12, thread 21216] --
+[2439.12, thread 21216] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[2439.12, thread 21216] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[2439.12, thread 21216] AddressLength: 6
+[2439.12, thread 21216] Address:       B0:3C:DC:8B:15:6A
+[2439.12, thread 21216] Index:         4
+[2439.12, thread 21216] Type:          71
+[2439.12, thread 21216] DhcpEnabled:   1
+[2439.12, thread 21216] IpAddress:     0.0.0.0
+[2439.12, thread 21216] IpMask:        0.0.0.0
+[2439.12, thread 21216] --
+[2439.12, thread 21216] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[2439.14, thread 21216] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[2439.14, thread 21216] AddressLength: 6
+[2439.14, thread 21216] Address:       B2:3C:DC:8B:15:69
+[2439.14, thread 21216] Index:         7
+[2439.14, thread 21216] Type:          71
+[2439.14, thread 21216] DhcpEnabled:   1
+[2439.14, thread 21216] IpAddress:     0.0.0.0
+[2439.14, thread 21216] IpMask:        0.0.0.0
+[2439.14, thread 21216] --
+[2439.14, thread 21216] Listing IPX interfaces:
+[2439.14, thread 21216] --
+[2439.14, thread 21216] Network:    00:00:00:01
+[2439.14, thread 21216] Node:       9E:4A:02:DC:BC:A7
+[2439.14, thread 21216] IP address: 192.168.1.92
+[2439.14, thread 21216] Netmask:    255.255.255.0
+[2439.14, thread 21216] Broadcast:  192.168.1.255
+[2439.14, thread 21216] IP address: 26.93.55.201
+[2439.14, thread 21216] Netmask:    255.0.0.0
+[2439.14, thread 21216] Broadcast:  26.255.255.255
+[2439.14, thread 21216] --
+[2439.14, thread 21216] Network:    00:00:00:01
+[2439.14, thread 21216] Node:       02:50:46:C4:D3:D4
+[2439.14, thread 21216] IP address: 26.93.55.201
+[2439.14, thread 21216] Netmask:    255.0.0.0
+[2439.14, thread 21216] Broadcast:  26.255.255.255
+[2439.14, thread 21216] --
+[13335.39, thread 10380] IPXWrapper 0.6.1
+[13335.40, thread 10380] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[13335.40, thread 10380] --
+[13335.40, thread 10380] Listing IP interfaces:
+[13335.40, thread 10380] --
+[13335.40, thread 10380] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[13335.40, thread 10380] Description:   Realtek Gaming 2.5GbE Family Controller
+[13335.40, thread 10380] AddressLength: 6
+[13335.40, thread 10380] Address:       A0:36:BC:67:89:32
+[13335.40, thread 10380] Index:         17
+[13335.40, thread 10380] Type:          6
+[13335.40, thread 10380] DhcpEnabled:   1
+[13335.40, thread 10380] IpAddress:     192.168.1.92
+[13335.40, thread 10380] IpMask:        255.255.255.0
+[13335.40, thread 10380] --
+[13335.40, thread 10380] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[13335.40, thread 10380] Description:   Famatech Radmin VPN Ethernet Adapter
+[13335.40, thread 10380] AddressLength: 6
+[13335.40, thread 10380] Address:       02:50:46:C4:D3:D4
+[13335.40, thread 10380] Index:         21
+[13335.40, thread 10380] Type:          6
+[13335.40, thread 10380] DhcpEnabled:   0
+[13335.40, thread 10380] IpAddress:     26.93.55.201
+[13335.40, thread 10380] IpMask:        255.0.0.0
+[13335.40, thread 10380] --
+[13335.40, thread 10380] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[13335.40, thread 10380] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[13335.40, thread 10380] AddressLength: 6
+[13335.40, thread 10380] Address:       B0:3C:DC:8B:15:69
+[13335.40, thread 10380] Index:         9
+[13335.40, thread 10380] Type:          71
+[13335.40, thread 10380] DhcpEnabled:   1
+[13335.40, thread 10380] IpAddress:     0.0.0.0
+[13335.40, thread 10380] IpMask:        0.0.0.0
+[13335.40, thread 10380] --
+[13335.40, thread 10380] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[13335.40, thread 10380] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[13335.40, thread 10380] AddressLength: 6
+[13335.40, thread 10380] Address:       B0:3C:DC:8B:15:6A
+[13335.40, thread 10380] Index:         4
+[13335.40, thread 10380] Type:          71
+[13335.40, thread 10380] DhcpEnabled:   1
+[13335.40, thread 10380] IpAddress:     0.0.0.0
+[13335.40, thread 10380] IpMask:        0.0.0.0
+[13335.40, thread 10380] --
+[13335.42, thread 10380] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[13335.42, thread 10380] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[13335.42, thread 10380] AddressLength: 6
+[13335.42, thread 10380] Address:       B2:3C:DC:8B:15:69
+[13335.42, thread 10380] Index:         7
+[13335.42, thread 10380] Type:          71
+[13335.42, thread 10380] DhcpEnabled:   1
+[13335.42, thread 10380] IpAddress:     0.0.0.0
+[13335.42, thread 10380] IpMask:        0.0.0.0
+[13335.42, thread 10380] --
+[13335.42, thread 10380] Listing IPX interfaces:
+[13335.42, thread 10380] --
+[13335.42, thread 10380] Network:    00:00:00:01
+[13335.42, thread 10380] Node:       9E:4A:02:DC:BC:A7
+[13335.42, thread 10380] IP address: 192.168.1.92
+[13335.42, thread 10380] Netmask:    255.255.255.0
+[13335.42, thread 10380] Broadcast:  192.168.1.255
+[13335.42, thread 10380] IP address: 26.93.55.201
+[13335.42, thread 10380] Netmask:    255.0.0.0
+[13335.42, thread 10380] Broadcast:  26.255.255.255
+[13335.42, thread 10380] --
+[13335.42, thread 10380] Network:    00:00:00:01
+[13335.42, thread 10380] Node:       02:50:46:C4:D3:D4
+[13335.42, thread 10380] IP address: 26.93.55.201
+[13335.42, thread 10380] Netmask:    255.0.0.0
+[13335.42, thread 10380] Broadcast:  26.255.255.255
+[13335.42, thread 10380] --
+[15142.39, thread 6372] IPXWrapper 0.6.1
+[15142.39, thread 6372] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[15142.39, thread 6372] --
+[15142.39, thread 6372] Listing IP interfaces:
+[15142.39, thread 6372] --
+[15142.39, thread 6372] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[15142.39, thread 6372] Description:   Realtek Gaming 2.5GbE Family Controller
+[15142.39, thread 6372] AddressLength: 6
+[15142.39, thread 6372] Address:       A0:36:BC:67:89:32
+[15142.39, thread 6372] Index:         17
+[15142.39, thread 6372] Type:          6
+[15142.39, thread 6372] DhcpEnabled:   1
+[15142.39, thread 6372] IpAddress:     192.168.1.92
+[15142.39, thread 6372] IpMask:        255.255.255.0
+[15142.39, thread 6372] --
+[15142.39, thread 6372] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[15142.39, thread 6372] Description:   Famatech Radmin VPN Ethernet Adapter
+[15142.39, thread 6372] AddressLength: 6
+[15142.39, thread 6372] Address:       02:50:46:C4:D3:D4
+[15142.39, thread 6372] Index:         21
+[15142.39, thread 6372] Type:          6
+[15142.39, thread 6372] DhcpEnabled:   0
+[15142.39, thread 6372] IpAddress:     26.93.55.201
+[15142.39, thread 6372] IpMask:        255.0.0.0
+[15142.39, thread 6372] --
+[15142.39, thread 6372] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[15142.39, thread 6372] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[15142.39, thread 6372] AddressLength: 6
+[15142.39, thread 6372] Address:       B0:3C:DC:8B:15:69
+[15142.39, thread 6372] Index:         9
+[15142.39, thread 6372] Type:          71
+[15142.39, thread 6372] DhcpEnabled:   1
+[15142.39, thread 6372] IpAddress:     0.0.0.0
+[15142.39, thread 6372] IpMask:        0.0.0.0
+[15142.39, thread 6372] --
+[15142.39, thread 6372] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[15142.39, thread 6372] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[15142.39, thread 6372] AddressLength: 6
+[15142.39, thread 6372] Address:       B0:3C:DC:8B:15:6A
+[15142.40, thread 6372] Index:         4
+[15142.40, thread 6372] Type:          71
+[15142.40, thread 6372] DhcpEnabled:   1
+[15142.40, thread 6372] IpAddress:     0.0.0.0
+[15142.40, thread 6372] IpMask:        0.0.0.0
+[15142.40, thread 6372] --
+[15142.40, thread 6372] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[15142.40, thread 6372] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[15142.40, thread 6372] AddressLength: 6
+[15142.40, thread 6372] Address:       B2:3C:DC:8B:15:69
+[15142.40, thread 6372] Index:         7
+[15142.40, thread 6372] Type:          71
+[15142.40, thread 6372] DhcpEnabled:   1
+[15142.40, thread 6372] IpAddress:     0.0.0.0
+[15142.40, thread 6372] IpMask:        0.0.0.0
+[15142.40, thread 6372] --
+[15142.40, thread 6372] Listing IPX interfaces:
+[15142.40, thread 6372] --
+[15142.40, thread 6372] Network:    00:00:00:01
+[15142.40, thread 6372] Node:       9E:4A:02:DC:BC:A7
+[15142.40, thread 6372] IP address: 192.168.1.92
+[15142.40, thread 6372] Netmask:    255.255.255.0
+[15142.40, thread 6372] Broadcast:  192.168.1.255
+[15142.40, thread 6372] IP address: 26.93.55.201
+[15142.40, thread 6372] Netmask:    255.0.0.0
+[15142.40, thread 6372] Broadcast:  26.255.255.255
+[15142.40, thread 6372] --
+[15142.40, thread 6372] Network:    00:00:00:01
+[15142.40, thread 6372] Node:       02:50:46:C4:D3:D4
+[15142.40, thread 6372] IP address: 26.93.55.201
+[15142.40, thread 6372] Netmask:    255.0.0.0
+[15142.40, thread 6372] Broadcast:  26.255.255.255
+[15142.40, thread 6372] --
+[8848.81, thread 23008] IPXWrapper 0.6.1
+[8848.81, thread 23008] Compiled at Sat 23 Sep 17:09:45 BST 2017
+[8848.81, thread 23008] --
+[8848.82, thread 23008] Listing IP interfaces:
+[8848.82, thread 23008] --
+[8848.82, thread 23008] AdapterName:   {AACFE7A9-E6D9-4E17-BC63-D9FFF4BE393F}
+[8848.82, thread 23008] Description:   Realtek Gaming 2.5GbE Family Controller
+[8848.82, thread 23008] AddressLength: 6
+[8848.82, thread 23008] Address:       A0:36:BC:67:89:32
+[8848.82, thread 23008] Index:         17
+[8848.82, thread 23008] Type:          6
+[8848.82, thread 23008] DhcpEnabled:   1
+[8848.82, thread 23008] IpAddress:     192.168.1.92
+[8848.82, thread 23008] IpMask:        255.255.255.0
+[8848.82, thread 23008] --
+[8848.82, thread 23008] AdapterName:   {BE42A9FF-7D3E-4921-8761-B44EDE87FF90}
+[8848.82, thread 23008] Description:   Famatech Radmin VPN Ethernet Adapter
+[8848.82, thread 23008] AddressLength: 6
+[8848.82, thread 23008] Address:       02:50:46:C4:D3:D4
+[8848.82, thread 23008] Index:         21
+[8848.82, thread 23008] Type:          6
+[8848.82, thread 23008] DhcpEnabled:   0
+[8848.82, thread 23008] IpAddress:     26.93.55.201
+[8848.82, thread 23008] IpMask:        255.0.0.0
+[8848.82, thread 23008] --
+[8848.82, thread 23008] AdapterName:   {79502AA9-693E-48D5-BCA4-F9AAC5547A44}
+[8848.82, thread 23008] Description:   Intel(R) Wi-Fi 6E AX211 160MHz
+[8848.82, thread 23008] AddressLength: 6
+[8848.82, thread 23008] Address:       B0:3C:DC:8B:15:69
+[8848.82, thread 23008] Index:         9
+[8848.82, thread 23008] Type:          71
+[8848.82, thread 23008] DhcpEnabled:   1
+[8848.82, thread 23008] IpAddress:     0.0.0.0
+[8848.82, thread 23008] IpMask:        0.0.0.0
+[8848.82, thread 23008] --
+[8848.82, thread 23008] AdapterName:   {10DBB4B1-3E4E-40B0-BB77-55D37340CC66}
+[8848.82, thread 23008] Description:   Microsoft Wi-Fi Direct Virtual Adapter
+[8848.82, thread 23008] AddressLength: 6
+[8848.82, thread 23008] Address:       B0:3C:DC:8B:15:6A
+[8848.82, thread 23008] Index:         4
+[8848.82, thread 23008] Type:          71
+[8848.82, thread 23008] DhcpEnabled:   1
+[8848.82, thread 23008] IpAddress:     0.0.0.0
+[8848.82, thread 23008] IpMask:        0.0.0.0
+[8848.82, thread 23008] --
+[8848.82, thread 23008] AdapterName:   {4CEBF1A5-AA98-4753-9AB4-0005A4BC73C6}
+[8848.82, thread 23008] Description:   Microsoft Wi-Fi Direct Virtual Adapter #2
+[8848.82, thread 23008] AddressLength: 6
+[8848.82, thread 23008] Address:       B2:3C:DC:8B:15:69
+[8848.82, thread 23008] Index:         7
+[8848.82, thread 23008] Type:          71
+[8848.82, thread 23008] DhcpEnabled:   1
+[8848.82, thread 23008] IpAddress:     0.0.0.0
+[8848.82, thread 23008] IpMask:        0.0.0.0
+[8848.82, thread 23008] --
+[8848.82, thread 23008] Listing IPX interfaces:
+[8848.82, thread 23008] --
+[8848.84, thread 23008] Network:    00:00:00:01
+[8848.84, thread 23008] Node:       9E:4A:02:DC:BC:A7
+[8848.84, thread 23008] IP address: 192.168.1.92
+[8848.84, thread 23008] Netmask:    255.255.255.0
+[8848.84, thread 23008] Broadcast:  192.168.1.255
+[8848.84, thread 23008] IP address: 26.93.55.201
+[8848.84, thread 23008] Netmask:    255.0.0.0
+[8848.84, thread 23008] Broadcast:  26.255.255.255
+[8848.84, thread 23008] --
+[8848.84, thread 23008] Network:    00:00:00:01
+[8848.84, thread 23008] Node:       02:50:46:C4:D3:D4
+[8848.84, thread 23008] IP address: 26.93.55.201
+[8848.84, thread 23008] Netmask:    255.0.0.0
+[8848.84, thread 23008] Broadcast:  26.255.255.255
+[8848.84, thread 23008] --

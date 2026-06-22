@@ -1,0 +1,121 @@
+include<[_inc_path]\AiScript.dfn>;
+include<[_inc_path]\AiScript.mcr>;
+include<[_main_path]\Projects\Projects\Scripts\SiliconAlert\Constants\Consts.dfn>;
+
+OpenStrateg("frenzied Si", CIV_SI, "PL3");
+
+	OpenTactic("tacticGatherC", CIV_SI, 10);
+		OpenFleet("fleetGatherC", CIV_SI, AIF_RES, 19);
+			Build(AICAN_MYSELF, AITRG_ALL);
+            PutInStaff(TRANSPORT, UNDEFINED, UNDEFINED, 45, -1, -1, 1, LOGO_DEFAULT, "CARGO_C");
+            GatherRC(AICAN_MYSELF, CORIUM);
+		CloseFleet();
+	CloseTactic();
+
+    OpenEvents();
+
+        Event(getOwnTime() > 40) {
+            ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetIntroSI", CIV_SI, AIF_SUPPLY);
+            ActFCmdMove(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetIntroSI"), 84, 114, 1);
+            actObjSelectN("INTRO_SI");
+            actAddFleet( getFleetNum("fleetIntroSI"));
+        };
+
+
+        Event(getOwnTime() > 103) {
+
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 81, 107, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 79, 111, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 87, 111, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, VERMIN, 81, 107, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, BIO_ACID_ASSAULTER, 79, 111, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, PARALYSIS_PROBE, 87, 111, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+
+            ActPlaySound(PLAYER_1, AIREL_MYSELF, "bors_003");
+            ActPlaySound(PLAYER_4, AIREL_MYSELF, "bors_003");
+            ActPlaySound(PLAYER_7, AIREL_MYSELF, "bors_003");
+
+            ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetINTRO", CIV_SI, AIF_MILITARY);
+            ActFCmdAttackT(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetINTRO"), PLAYER_ALL, AITRG_ALL, UNDEFINED, LOGO_1, "INTRO");
+
+            actObjSelectN("LEFT_FREN_SI");
+            actAddFleet( getFleetNum("fleetINTRO"));
+
+            //ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_ATTACK2");
+        };
+
+        Event(TRUE){
+            if(GetPlObjN(PLAYER_1, AIREL_MYSELF, "INTRO", LOGO_1 ,82, 130, 0, 4, 4, 0) == 0 &&
+            getOwnTime() > 115) {
+                ActFCmdMove(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetINTRO"), 81, 106, 1);
+                //ActStringMess(PLAYER_1, AIREL_MYSELF, "END INTRO");
+                actObjSelectN("LEFT_FREN_SI");
+                actAddFleet( getFleetNum("fleetINTRO"));
+                //ActDelPlObjS(PLAYER_3, AIREL_MYSELF/*, VEFF_TELEPORT*/);
+            } else {
+                ActLockEvent();
+            }
+        }
+
+        Event(TRUE){
+            actStringMess("tactic ON + " + _inttostr(GetPlObjT(PLAYER_3, AIREL_MYSELF, TRANSPORT)));
+            ActObjSelectT(PLAYER_3, AIREL_MYSELF, TRANSPORT);
+            actExecTactic("tacticGatherC");
+			//actCreateFleet("fleetGatherC", CIV_BO, AIF_RES);
+
+            /*
+            ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetCorM1", CIV_SI, AIF_CARRIER);
+            ActObjSelectN(PLAYER_3, AIREL_MYSELF, "CorMine1"); // CorMine1
+            ActFCmdGatherRC(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM1"), CORIUM, 5, 91, 1, 11,11,-1);
+            ActAddFleet(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM1"));
+
+            ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetCorM2", CIV_SI, AIF_CARRIER);
+            ActObjSelectN(PLAYER_3, AIREL_MYSELF, "CorMine2"); // CorMine1
+            ActFCmdGatherRC(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM2"), CORIUM, 16, 116, 1);
+            ActAddFleet(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM2"));
+
+            ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetCorM3", CIV_SI, AIF_CARRIER);
+            ActObjSelectN(PLAYER_3, AIREL_MYSELF, "CorMine3"); // CorMine1
+            ActFCmdGatherRC(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM3"), CORIUM, 18, 106, 1);
+            ActAddFleet(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCorM3"));
+            */
+
+
+        }
+/*
+        EventBriefing(_PS0 == "INTRO_ATTACK2")
+        {
+            ActStringMess(PLAYER_1, AIREL_MYSELF, "END INTRO");
+            //ActAddStrRes(PLAYER_5, AIREL_MYSELF, 1, PLAYER5_NAME + TEXT_INFO_CREATE_ART_1 + TEXT_INFO_EAST + PLAYER0_SILICOID_ALPHA_NAME + TEXT_INFO_CREATE_ART_2);
+        };
+*/
+/*
+        Event(getOwnTime() <= MAIN_TIMER_TIME - 3, 1) // Срабатывает сразу при запуске Events Program
+        {
+            // Создаем 5 подводных лодок SHS_SUB
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SHS_SUB, 20, 111, 3, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SHS_SUB, 20, 111, 3, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SHS_SUB, 20, 111, 3, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SHS_SUB, 20, 111, 3, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SHS_SUB, 20, 111, 3, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
+            
+            actCreateFleet("fleetCONV1", CIV_SI, AIF_MILITARY);
+            ActFParPatrol(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCONV1"), AICAN_BYORDER);
+            ActFParSetPatrolPoint(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCONV1"), TRACK_LEFT_X4, TRACK_LEFT_Y4, TRACK_LEFT_Z4, 0, 0,FORMATION_WALL, FORMATION_MIN_SIZE);
+            ActFParSetPatrolPoint(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCONV1"), TRACK_LEFT_X3, TRACK_LEFT_Y3, TRACK_LEFT_Z3, 0, 0,FORMATION_WALL, FORMATION_MIN_SIZE);
+            ActFParSetPatrolPoint(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCONV1"), TRACK_LEFT_X2, TRACK_LEFT_Y2, TRACK_LEFT_Z2, 0, 0,FORMATION_WALL, FORMATION_MIN_SIZE);
+            ActFParSetPatrolPoint(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetCONV1"), TRACK_LEFT_X1, TRACK_LEFT_Y1, TRACK_LEFT_Z1, 0, 0,FORMATION_WALL, FORMATION_MIN_SIZE);
+            
+            actObjSelectN("LEFT_FREN_SI");
+            actAddFleet( getFleetNum("fleetCONV1"));
+
+            // Опционально: можно добавить сообщение
+            // actStringMess("5 SHS_SUB submarines created for player 3!");
+            
+            // Предотвращаем повторное срабатывание события
+            //ActLockEvent();
+        };
+*/
+	CloseEvents();
+CloseStrateg();
