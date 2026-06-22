@@ -3,10 +3,14 @@ include<[_inc_path]\AiScript.mcr>;
 include<[_main_path]\Projects\Projects\Scripts\SiliconAlert\Constants\Consts.dfn>;
 
 /*
+Игроки
 BO - PLAYER_1
-WS - PLAYER_5
+WS - PLAYER_4
 BO - PLAYER_7
+Союзник игроков
+WS - PLAYER_5
 
+Вражеский ИИ
 SI - PLAYER_3
 */
 

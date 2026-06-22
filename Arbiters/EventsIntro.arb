@@ -1,39 +1,22 @@
     Event(TRUE) {
-
-        //ActStringMess(PLAYER_1, AIREL_MYSELF, "PL4 = " + _inttostr(IsPlPresent(4)));
-
-        //ActSetScreen(PLAYER_1, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
-        //ActSetScreen(PLAYER_4, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
-       // ActSetScreen(PLAYER_7, AIREL_MYSELF, INTRO_SCREEN_X, INTRO_SCREEN_Y, SCROLL_FAST);
-
         ActClearStrRes(PLAYER_1, AIREL_MYSELF);
         ActClearStrRes(PLAYER_4, AIREL_MYSELF);
         ActClearStrRes(PLAYER_7, AIREL_MYSELF);
+        _ploop_begin
+            ActAddStrRes(_plmyself, 0, INTRO_TURELS0);
+            ActAddStrRes(_plmyself, 1, INTRO_TURELS1);
+            ActAddStrRes(_plmyself, 2, INTRO_TURELS2);
+            ActAddStrRes(_plmyself, 3, INTRO_TURELS3);
+            ActAddStrRes(_plmyself, 4, INTRO_TURELS4);
+            ActAddStrRes(_plmyself, 5, INTRO_TURELS5);
+            ActAddStrRes(_plmyself, 6, INTRO_TURELS6);
 
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 0, INTRO_TURELS0);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 1, INTRO_TURELS1);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 2, INTRO_TURELS2);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 3, INTRO_TURELS3);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 4, INTRO_TURELS4);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 5, INTRO_TURELS5);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 6, INTRO_TURELS6);
-
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 7, INTRO_SHARK_TEXT0);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 8, INTRO_SHARK_TEXT1);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 9, INTRO_SHARK_TEXT2);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 10, INTRO_SHARK_TEXT3);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 11, INTRO_SHARK_TEXT4);
-
-
-        //ActBldObj(PLAYER_1, AIREL_MYSELF, BO_FLAGSHIP, FALSE);
-        //ActBldObj(PLAYER_5, AIREL_MYSELF, WS_FLAGSHIP, FALSE);
-        //ActBldObj(PLAYER_7, AIREL_MYSELF, BO_FLAGSHIP, FALSE);
-
-        //ActBldObj(PLAYER_1, AIREL_MYSELF, SUBCENTER, TRUE);
-        //ActTechSetAll(PLAYER_5, AIREL_MYSELF);
-        //ActTechDevEnableAll(PLAYER_1, AIREL_MYSELF);
-        
-        //ActTechDevEnable(PLAYER_1, AIREL_MYSELF, TTECH_WS_HYDRO_FUSION_TECHNOLOGY);
+            ActAddStrRes(_plmyself, 7, INTRO_SHARK_TEXT0);
+            ActAddStrRes(_plmyself, 8, INTRO_SHARK_TEXT1);
+            ActAddStrRes(_plmyself, 9, INTRO_SHARK_TEXT2);
+            ActAddStrRes(_plmyself, 10, INTRO_SHARK_TEXT3);
+            ActAddStrRes(_plmyself, 11, INTRO_SHARK_TEXT4);
+        _ploop_end
     }
     
     Event(getOwnTime() > 1) {
@@ -42,20 +25,15 @@
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, AIR_EXTRACTOR, 84, 109, 1, LOGO_5, "INTRO", 0, 100);
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SHARK_CONTROL, 84, 111, 1, LOGO_5, "INTRO", 0, 100);
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SONAR, 86, 111, 1, LOGO_5, "INTRO", 0, 100);
-           
-        //ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL");
-        //ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL");
-        //ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TUREL");
-        //ActTechSet(PLAYER_5, AIREL_MYSELF, TTECH_WS_UPGRADE_HF_CANNON_FIRE_RATE);
 
         ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL1");
+        ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL1");
+        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TUREL1");
 
     }
     
-    EventPlObjAttacked(_PS1 == "INTRO" && _PI13 == HF_CANNON && getOwnTime() > 51)
+    EventPlObjAttacked(_PS1 == "INTRO" && _PI13 == HF_CANNON && getOwnTime() > 32)
     {
-        //ActStringMess(PLAYER_1, AIREL_MYSELF,"TuRell kill SI bug");
-
         // Уничтожаем объект игрока, который был атакован Soliton
         // Используем параметры атакованного объекта из события
         if (_PI0 == PLAYER_3) {
@@ -65,10 +43,22 @@
         ActLockEvent();
     };
 
-    Event(getOwnTime() > 56) {
+    Event(getOwnTime() > 11) {
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+    }
+
+    Event(getOwnTime() > 32) {
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 83, 110, SCROLL_FAST);
+    }
+
+    Event(getOwnTime() > 40) {
         ActSetScreen(PLAYER_1, AIREL_MYSELF, 84, 111, SCROLL_FAST);
         ActSetScreen(PLAYER_4, AIREL_MYSELF, 84, 111, SCROLL_FAST);
-       ActSetScreen(PLAYER_7, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 84, 111, SCROLL_FAST);
     }
 
     /*
