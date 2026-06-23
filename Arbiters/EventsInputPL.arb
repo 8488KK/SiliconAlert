@@ -1,0 +1,33 @@
+Event(getOwnTime()%3==0 && _GL3==1, 3){
+    //ActStringMess(PLAYER_1, AIREL_MYSELF, "Event active");
+    if(GetCurrPl()==PLAYER_1 && _GL0 == 0){
+        ActOutText(PLAYER_1, AIREL_MYSELF, 3, 24, 25);
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "Output Message");
+    }
+    if(GetCurrPl()==PLAYER_4 && _GL1 == 0){
+        ActOutText(PLAYER_4, AIREL_MYSELF, 3, 24, 25);
+    }
+    if(GetCurrPl()==PLAYER_7 && _GL2 == 0){
+        ActOutText(PLAYER_7, AIREL_MYSELF, 3, 24, 25);
+    }
+    ActLockEvent();
+}
+
+EventInput(_PI0==0){
+
+    if(GetCurrPl()==PLAYER_1 && _GL3==1 && _GL0 == 0){ 
+        ActCreatePlObj(PLAYER_1, AIREL_MYSELF, FIGHTER, 100, 104, 2, LOGO_1, "", -1, 100, VEFF_TELEPORT);
+        _GL0:=1;
+    } 
+
+    if(GetCurrPl()==PLAYER_4 && _GL3==1 && _GL1 == 0){ 
+        ActCreatePlObj(PLAYER_4, AIREL_MYSELF, SENTINEL, 101, 104, 2, LOGO_4, "", -1, 100, VEFF_TELEPORT);
+        _GL1:=1;
+    }
+
+    if(GetCurrPl()==PLAYER_7 && _GL3==1 && _GL2 == 0){ 
+        ActCreatePlObj(PLAYER_7, AIREL_MYSELF, FIGHTER, 102, 104, 2, LOGO_7, "", -1, 100, VEFF_TELEPORT);
+        _GL2:=1;
+    }
+    ActLockEvent();
+}

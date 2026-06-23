@@ -1,4 +1,13 @@
     Event(TRUE) {
+
+        //ActDelPlObjEx(PLAYER_5, AIREL_MYSELF, AITRG_ALL, UNDEFINED, LOGO_5, "INTRO2");
+
+        // скрываем здания игрока 5
+        ActCreateFleet(PLAYER_5, AIREL_MYSELF, "fltLockDark", CIV_WS, AIF_BASE);
+        ActObjSelectN(PLAYER_5, AIREL_MYSELF, "INTRO2");
+        ActAddFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"));
+        ActLockFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"), LOCKOBJ_DARK);
+
         ActClearStrRes(PLAYER_1, AIREL_MYSELF);
         ActClearStrRes(PLAYER_4, AIREL_MYSELF);
         ActClearStrRes(PLAYER_7, AIREL_MYSELF);
@@ -16,6 +25,23 @@
             ActAddStrRes(_plmyself, 9, INTRO_SHARK_TEXT2);
             ActAddStrRes(_plmyself, 10, INTRO_SHARK_TEXT3);
             ActAddStrRes(_plmyself, 11, INTRO_SHARK_TEXT4);
+
+            ActAddStrRes(_plmyself, 12, INTRO2_TEXT12);
+            ActAddStrRes(_plmyself, 13, INTRO2_TEXT13);
+            ActAddStrRes(_plmyself, 14, INTRO2_TEXT14);
+            ActAddStrRes(_plmyself, 15, INTRO2_TEXT15);
+            ActAddStrRes(_plmyself, 16, INTRO2_TEXT16);
+            ActAddStrRes(_plmyself, 17, INTRO2_TEXT17);
+            ActAddStrRes(_plmyself, 18, INTRO2_TEXT18);
+            ActAddStrRes(_plmyself, 19, INTRO2_TEXT19);
+            ActAddStrRes(_plmyself, 20, INTRO2_TEXT20);
+            ActAddStrRes(_plmyself, 21, INTRO2_TEXT21);
+            ActAddStrRes(_plmyself, 22, INTRO2_TEXT22);
+            
+            ActAddStrRes(_plmyself, 23, EMPTY_TEXT);
+            ActAddStrRes(_plmyself, 24, PRESS_KEY_TEXT1);
+            ActAddStrRes(_plmyself, 25, PRESS_KEY_TEXT2);
+
         _ploop_end
     }
     
@@ -25,6 +51,9 @@
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, AIR_EXTRACTOR, 84, 109, 1, LOGO_5, "INTRO", 0, 100);
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SHARK_CONTROL, 84, 111, 1, LOGO_5, "INTRO", 0, 100);
         ActCreatePlObj(PLAYER_5, AIREL_MYSELF, SONAR, 86, 111, 1, LOGO_5, "INTRO", 0, 100);
+        
+        // открываем туман в области Турели игрока 5
+        ActHoleFOW(PLAYER_1, AIREL_MYSELF, 83, 110, 5, 5, 84);
 
         ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL1");
         ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL1");
@@ -49,16 +78,45 @@
         ActSetScreen(PLAYER_7, AIREL_MYSELF, 83, 110, SCROLL_FAST);
     }
 
-    Event(getOwnTime() > 32) {
-        ActSetScreen(PLAYER_1, AIREL_MYSELF, 83, 110, SCROLL_FAST);
-        ActSetScreen(PLAYER_4, AIREL_MYSELF, 83, 110, SCROLL_FAST);
-        ActSetScreen(PLAYER_7, AIREL_MYSELF, 83, 110, SCROLL_FAST);
-    }
-
-    Event(getOwnTime() > 40) {
+    Event(getOwnTime() > 42) {
         ActSetScreen(PLAYER_1, AIREL_MYSELF, 84, 111, SCROLL_FAST);
         ActSetScreen(PLAYER_4, AIREL_MYSELF, 84, 111, SCROLL_FAST);
         ActSetScreen(PLAYER_7, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+    }
+
+    Event(getOwnTime() > 67) {
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 84, 111, SCROLL_FAST);
+    }
+
+    // Event INTRO_2
+    Event(getOwnTime() > 85) {
+
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, TRANCENTER, 101, 96, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, AIR_EXTRACTOR, 101, 98, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, TECHCENTER, 99, 99, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, TELESHIELD, 101, 100, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, TELESHIELD, 102, 100, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, INFOCENTER, 103, 99, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, DISPERSER, 101, 101, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, CYBERCENTER, 100, 101, 1, LOGO_5, "", 0, 100);
+        // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, CYBERCENTER, 103, 101, 1, LOGO_5, "", 0, 100);
+
+        //ActCreateFleet(PLAYER_5, AIREL_MYSELF, "fltLockDark", CIV_WS, AIF_BASE);
+        ActObjSelectN(PLAYER_5, AIREL_MYSELF, "INTRO2");
+        ActAddFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"));
+        ActUnLockFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"), LOCKOBJ_ALL);
+
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 99, 99, SCROLL_FAST);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 99, 99, SCROLL_FAST);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 99, 99, SCROLL_FAST);
+    }
+
+    EventBriefing(_PS0 == "INTRO_TUREL1"){
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "Brifeng End");
+        _GL3:=1;
+        actOnEvent(3);
     }
 
     /*
@@ -79,29 +137,6 @@
         ActAddFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"));
         ActLockFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7,"fleetPl7"), LOCKOBJ_INTERF );
     }
-
-    Event(getOwnTime() > 2) {
-
-        ActClearStrRes(PLAYER_1, AIREL_MYSELF);
-        ActClearStrRes(PLAYER_5, AIREL_MYSELF);
-        ActClearStrRes(PLAYER_7, AIREL_MYSELF);
-
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 1, INTRO_TEXT1);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 2, INTRO_TEXT2);
-        ActAddStrRes(PLAYER_1, AIREL_MYSELF, 3, INTRO_TEXT3);
-
-        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 1, INTRO_TEXT1);
-        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 2, INTRO_TEXT2);
-        ActAddStrRes(PLAYER_5, AIREL_MYSELF, 3, INTRO_TEXT3);
-
-        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 1, INTRO_TEXT1);
-        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 2, INTRO_TEXT2);
-        ActAddStrRes(PLAYER_7, AIREL_MYSELF, 3, INTRO_TEXT3);
-
-        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_ATTACK");
-        ActPlayBriefing(PLAYER_5, AIREL_MYSELF, "INTRO_ATTACK");
-        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_ATTACK");
-    };
 
     Event(getOwnTime() > 11){
         //ActStringMess(PLAYER_1, AIREL_MYSELF, "SHOW ACTION");
