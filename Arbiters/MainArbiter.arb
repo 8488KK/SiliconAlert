@@ -12,6 +12,12 @@ WS - PLAYER_5
 
 Вражеский ИИ
 SI - PLAYER_3
+
+Флаги
+GL0 - Игрок 1 в игре
+GL1 - Игрок 4 в игре
+GL2 - Игрок 7 в игре
+GL3 - брифинг окончен
 */
 
 OpenArbiter("Arbiter Silicon Alert");
@@ -22,7 +28,8 @@ OpenArbiter("Arbiter Silicon Alert");
         include<[_curr_path]\EventsDeadZone.arb>;
         include<[_curr_path]\EventsIntro.arb>;
         include<[_curr_path]\EventsSetTurretsSI.arb>;
-        
+        include<[_curr_path]\EventsInputPL.arb>;
+
         Event(TRUE) {
             //ActStringMess(PLAYER_1, AIREL_MYSELF, _inttostr(GetTimerTime(PLAYER_1)));
             ActLockEvent();
