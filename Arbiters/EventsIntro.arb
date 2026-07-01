@@ -42,6 +42,18 @@
             ActAddStrRes(_plmyself, 24, PRESS_KEY_TEXT1);
             ActAddStrRes(_plmyself, 25, PRESS_KEY_TEXT2);
 
+            ActAddStrRes(_plmyself, 26, INTRO2_TEXT23);
+
+            ActAddStrRes(_plmyself, 27, INTRO3_TEXT27);
+            ActAddStrRes(_plmyself, 28, INTRO3_TEXT28);
+            ActAddStrRes(_plmyself, 29, INTRO3_TEXT29);
+            ActAddStrRes(_plmyself, 30, INTRO3_TEXT30);
+            ActAddStrRes(_plmyself, 31, INTRO3_TEXT31);
+            ActAddStrRes(_plmyself, 32, INTRO3_TEXT32);
+            
+            ActAddStrRes(_plmyself, 33, "");
+            ActAddStrRes(_plmyself, 34, WARNING_TEXT);
+
         _ploop_end
     }
     
@@ -54,13 +66,8 @@
         
         // открываем туман в области Турели игрока 5
         ActHoleFOW(PLAYER_1, AIREL_MYSELF, 83, 110, 5, 5, 84);
-
-        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL1");
-        ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL1");
-        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TUREL1");
-
     }
-    
+
     EventPlObjAttacked(_PS1 == "INTRO" && _PI13 == HF_CANNON && getOwnTime() > 32)
     {
         // Уничтожаем объект игрока, который был атакован Soliton
@@ -91,7 +98,7 @@
     }
 
     // Event INTRO_2
-    Event(getOwnTime() > 85) {
+    Event(getOwnTime() > 82) {
 
         // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, TRANCENTER, 101, 96, 1, LOGO_5, "", 0, 100);
         // ActCreatePlObj(PLAYER_5, AIREL_MYSELF, AIR_EXTRACTOR, 101, 98, 1, LOGO_5, "", 0, 100);
@@ -108,19 +115,12 @@
         ActAddFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"));
         ActUnLockFleet(PLAYER_5, AIREL_MYSELF, GetFleetNum(PLAYER_5,"fltLockDark"), LOCKOBJ_ALL);
 
-        ActSetScreen(PLAYER_1, AIREL_MYSELF, 99, 99, SCROLL_FAST);
-        ActSetScreen(PLAYER_4, AIREL_MYSELF, 99, 99, SCROLL_FAST);
-        ActSetScreen(PLAYER_7, AIREL_MYSELF, 99, 99, SCROLL_FAST);
-    }
-
-    EventBriefing(_PS0 == "INTRO_TUREL1"){
-        //ActStringMess(PLAYER_1, AIREL_MYSELF, "Brifeng End");
-        _GL3:=1;
-        actOnEvent(3);
+        ActSetScreen(PLAYER_1, AIREL_MYSELF, 99, 99, SCROLL_SOFT);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF, 99, 99, SCROLL_SOFT);
+        ActSetScreen(PLAYER_7, AIREL_MYSELF, 99, 99, SCROLL_SOFT);
     }
 
     /*
-
    Event(getOwnTime() > 0) {
         ActCreateFleet(PLAYER_1, AIREL_MYSELF, "fleetPl1", CIV_BO, AISF_ALL);
         ActObjSelectN(PLAYER_1, AIREL_MYSELF, UNIT_NAME_PLAYER1);

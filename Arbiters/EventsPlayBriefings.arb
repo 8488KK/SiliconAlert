@@ -1,0 +1,92 @@
+    Event(getOwnTime()> 1){
+        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TUREL1");
+        ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TUREL1");
+        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TUREL1");
+    }
+
+    Event(getOwnTime()> 83){
+        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_TECHCENTER");
+        ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_TECHCENTER");
+        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_TECHCENTER");
+    }
+
+    EventBriefing(_PS0 == "INTRO_TECHCENTER"){
+        //ActStringMess(PLAYER_1, AIREL_MYSELF, "Brifeng End");
+        _GL3:=1;
+        actOnEvent(3);
+    }
+
+    Event(_GL3==1){
+        
+        if(_RT0==0){
+           if(_GL0==1){
+            _RT1:= GetFleetVision(PLAYER_1, GetFleetNum(PLAYER_1, "fltPL1"), PLAYER_3, PLAYER_1, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat");
+            //ActStringMess(PLAYER_1, AIREL_MYSELF, "VISION = " + _inttostr(_RT1));
+            if(_RT1>0){
+                    ActSetScreen(PLAYER_1, AIREL_MYSELF, 83, 104, SCROLL_SOFT);
+                    ActHoleFOW(PLAYER_1, AIREL_MYSELF, 83, 104, 1, 3, 8);
+                    _RT0:=1;
+                }
+            }
+
+            if(_GL1==1){
+                if(GetFleetVision(PLAYER_4, GetFleetNum(PLAYER_4, "sntPL4"), PLAYER_3, PLAYER_4, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat")>0){
+                    ActSetScreen(PLAYER_4, AIREL_MYSELF,  83, 104, SCROLL_SOFT);
+                    ActHoleFOW(PLAYER_4, AIREL_MYSELF, 83, 104, 1, 3, 8);
+                    _RT0:=1;
+                }
+            }
+
+            if(_GL2==1){
+                if(GetFleetVision(PLAYER_7, GetFleetNum(PLAYER_7, "fltPL7"), PLAYER_3, PLAYER_7, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat")>0){
+                    ActSetScreen(PLAYER_7, AIREL_MYSELF,  83, 104, SCROLL_SOFT);
+                    ActHoleFOW(PLAYER_7, AIREL_MYSELF, 83, 104, 1, 3, 8);
+                    _RT0:=1;
+                }
+            }
+
+            if(_RT0==1){
+                // ActCreateFleet(PLAYER_3, AIREL_MYSELF, "fleetINTRO", CIV_SI, AIF_ARMED);
+                // ActObjSelectN(PLAYER_3, AIREL_MYSELF, "LEFT_FREN_SI");
+                // ActAddFleet(PLAYER_3, AIREL_MYSELF, GetFleetNum(PLAYER_3,"fleetINTRO"));
+                // ActDelPlObjS(PLAYER_3, AIREL_MYSELF, VEFF_TELEPORT);
+                _GL4:=1;
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat", 0, 0, 0, -1, -1, -1, VEFF_TELEPORT);
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat", 0, 0, 0, -1, -1, -1, VEFF_TELEPORT);
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "Regenegat", 0, 0, 0, -1, -1, -1, VEFF_TELEPORT);
+
+                ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_FINAL");
+                ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_FINAL");
+                ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_FINAL");
+            } else{
+                _RT0:=2;
+                //ActStringMess(PLAYER_1, AIREL_MYSELF, "_RT0 = " + _inttostr(_RT0));
+                ActLockEvent();
+            }
+            
+        } else {
+            _RT0:=0;
+            ActLockEvent();
+        }
+    }
+
+    Event(getOwnTime()> START_INTRO_BIGPROBLEM){
+        ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "INTRO_BIGPROBLEM");
+        ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "INTRO_BIGPROBLEM");
+        ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "INTRO_BIGPROBLEM");
+    }
+
+/*
+Event(getOwnTime()> ((225/25)*3 + 3)){
+    
+        ActCreatePlObj(PLAYER_1, AIREL_MYSELF, FIGHTER, 101, 97, 2, LOGO_1, "fgtPL1", -1, 100, VEFF_TELEPORT);
+
+        ActCreateFleet(PLAYER_1, AIREL_MYSELF, "fltPL1", CIV_BO, AIF_MILITARY);
+        ActFCmdMove(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1, "fltPL1"), 100, 104, 2);
+        ActObjSelectN(PLAYER_1, AIREL_MYSELF, "fgtPL1");
+        ActAddFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1, "fltPL1"));
+
+}
+
+
+*/

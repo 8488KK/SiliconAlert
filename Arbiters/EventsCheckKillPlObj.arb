@@ -1,0 +1,62 @@
+    EventPlObjKilled(TRUE){
+        
+        // убит объект с именем fgtPL1
+        if(_PS0 == "fgtPL1" && _GL4==0){
+            ActStringMess(PLAYER_1, AIREL_MYSELF, "_GL4 = " + _inttostr(_GL4));
+            _GL4-=1;
+            ActPlayBriefing(PLAYER_1, AIREL_MYSELF, "WARN_COMMAND");
+        } else{
+            if(_PS0 == "fgtPL1" && _GL4==-1){
+                _GL4-=1;
+            }
+        }
+        // убит объект с именем sntPL4
+        if(_PS0 == "sntPL4" && _GL5==0){
+            ActStringMess(PLAYER_1, AIREL_MYSELF, "_GL4 = " + _inttostr(_GL5));
+            _GL5-=1;
+            ActPlayBriefing(PLAYER_4, AIREL_MYSELF, "WARN_COMMAND");
+        } else {
+            if(_PS0 == "sntPL4" && _GL5==-1){
+                _GL5-=1;
+            }
+        }
+        // убит объект с именем fgtPL7
+        if(_PS0 == "fgtPL7" && _GL6==0){
+            ActStringMess(PLAYER_1, AIREL_MYSELF, "_GL4 = " + _inttostr(_GL6));
+            _GL6-=1;
+            ActPlayBriefing(PLAYER_7, AIREL_MYSELF, "WARN_COMMAND");
+        } else {
+            if(_PS0 == "fgtPL7" && _GL6==-1){
+                _GL6-=1;
+            }
+        }
+        ActLockEvent();
+    }
+
+    EventBriefing(_PS0 == "WARN_COMMAND"){
+        if(_GL4==-1){
+            ActCreatePlObj(PLAYER_1, AIREL_MYSELF, FIGHTER, 101, 97, 2, LOGO_1, "fgtPL1", -1, 100, VEFF_TELEPORT);
+
+            ActCreateFleet(PLAYER_1, AIREL_MYSELF, "fltPL1", CIV_BO, AIF_MILITARY);
+            ActFCmdMove(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1, "fltPL1"), 100, 104, 2);
+            ActObjSelectN(PLAYER_1, AIREL_MYSELF, "fgtPL1");
+            ActAddFleet(PLAYER_1, AIREL_MYSELF, GetFleetNum(PLAYER_1, "fltPL1"));
+            ActSetScreen(PLAYER_1, AIREL_MYSELF, 101, 97, SCROLL_SOFT);
+        }
+        if(_GL5==-1){
+            ActCreatePlObj(PLAYER_4, AIREL_MYSELF, SENTINEL, 101, 96, 2, LOGO_4, "sntPL4", -1, 100, VEFF_TELEPORT);
+            ActCreateFleet(PLAYER_4, AIREL_MYSELF, "fltPL4", CIV_WS, AIF_MILITARY);
+            ActFCmdMove(PLAYER_4, AIREL_MYSELF, GetFleetNum(PLAYER_4, "fltPL4"), 101, 104, 2);
+            ActObjSelectN(PLAYER_4, AIREL_MYSELF, "sntPL4");
+            ActAddFleet(PLAYER_4, AIREL_MYSELF, GetFleetNum(PLAYER_4, "fltPL4"));
+            ActSetScreen(PLAYER_4, AIREL_MYSELF, 101, 96, SCROLL_SOFT);
+        }
+        if(_GL6==-1){
+            ActCreatePlObj(PLAYER_7, AIREL_MYSELF, FIGHTER, 102, 96, 2, LOGO_7, "fgtPL7", -1, 100, VEFF_TELEPORT);
+            ActCreateFleet(PLAYER_7, AIREL_MYSELF, "fltPL7", CIV_BO, AIF_MILITARY);
+            ActFCmdMove(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7, "fltPL7"), 102, 104, 2);
+            ActObjSelectN(PLAYER_7, AIREL_MYSELF, "fgtPL7");
+            ActAddFleet(PLAYER_7, AIREL_MYSELF, GetFleetNum(PLAYER_7, "fltPL7"));
+            ActSetScreen(PLAYER_7, AIREL_MYSELF, 102, 96, SCROLL_SOFT);
+        }
+    }
