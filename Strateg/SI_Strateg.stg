@@ -21,19 +21,19 @@ OpenStrateg("frenzied Si", CIV_SI, "PL3");
             actAddFleet( getFleetNum("fleetIntroSI"));
 
             ActShowMapAction(PLAYER_1, AIREL_MYSELF, 0, 73, 104);
-            ActSetScreen(PLAYER_1, AIREL_MYSELF, 73, 104, SCROLL_SOFT);
-            ActHoleFOW(PLAYER_1, AIREL_MYSELF, 73, 104, 1, 1, 4);
+            ActSetScreen(PLAYER_1, AIREL_MYSELF, 79, 109, SCROLL_SOFT);
+            ActHoleFOW(PLAYER_1, AIREL_MYSELF, 73, 104, 1, 3, 8);
 
             ActShowMapAction(PLAYER_4, AIREL_MYSELF, 0, 73, 104);
-            ActSetScreen(PLAYER_4, AIREL_MYSELF, 73, 104, SCROLL_SOFT);
-            ActHoleFOW(PLAYER_4, AIREL_MYSELF, 73, 104, 1, 1, 4);
+            ActSetScreen(PLAYER_4, AIREL_MYSELF,  79, 109, SCROLL_SOFT);
+            ActHoleFOW(PLAYER_4, AIREL_MYSELF, 73, 104, 1, 3, 8);
 
             ActShowMapAction(PLAYER_7, AIREL_MYSELF, 0, 73, 104);
-            ActSetScreen(PLAYER_7, AIREL_MYSELF, 73, 104, SCROLL_SOFT);
-            ActHoleFOW(PLAYER_7, AIREL_MYSELF, 73, 104, 1, 1, 4);
+            ActSetScreen(PLAYER_7, AIREL_MYSELF,  79, 109, SCROLL_SOFT);
+            ActHoleFOW(PLAYER_7, AIREL_MYSELF, 73, 104, 1, 3, 8);
         };
 
-
+        //Event(getOwnTime() > 10) {
         Event(getOwnTime() > 68) {
 
             ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 81, 107, 2, LOGO_3, "LEFT_FREN_SI", 0, 100, VEFF_TELEPORT);
@@ -58,13 +58,31 @@ OpenStrateg("frenzied Si", CIV_SI, "PL3");
         };
 
         Event(TRUE){
-            if(GetPlObjN(PLAYER_1, AIREL_MYSELF, "INTRO", LOGO_1 ,82, 130, 0, 4, 4, 0) == 0 &&
+            if(GetPlObjN(PLAYER_5, AIREL_MYSELF, "INTRO", LOGO_5 ,82, 130, 0, 4, 4, 0) == 0 &&
             getOwnTime() > 115) {
-                ActFCmdMove(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetINTRO"), 81, 106, 1);
-                //ActStringMess(PLAYER_1, AIREL_MYSELF, "END INTRO");
-                actObjSelectN("LEFT_FREN_SI");
-                actAddFleet( getFleetNum("fleetINTRO"));
+                //ActFCmdMove(PLAYER_3, AIREL_MYSELF, getFleetNum("fleetINTRO"), 81, 106, 1);
+                //ActStringMess(PLAYER_1, AIREL_MYSELF, "DEL FLEET");
+                //actObjSelectN("LEFT_FREN_SI");
+                //actAddFleet( getFleetNum("fleetINTRO"));
+
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "LEFT_FREN_SI");
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "LEFT_FREN_SI");
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, SI_FLAGSHIP, LOGO_3, "LEFT_FREN_SI");
+
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, VERMIN, LOGO_3, "LEFT_FREN_SI");
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, BIO_ACID_ASSAULTER, LOGO_3, "LEFT_FREN_SI");
+                ActDelPlObjEx(PLAYER_3, AIREL_MYSELF, AITRG_ALL, PARALYSIS_PROBE, LOGO_3, "LEFT_FREN_SI");
+
                 //ActDelPlObjS(PLAYER_3, AIREL_MYSELF/*, VEFF_TELEPORT*/);
+                //actDelFleet(getFleetNum("fleetINTRO"));
+
+                ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 81, 104, 2, LOGO_3, "Regenegat", -1, 100);
+                ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 83, 104, 2, LOGO_3, "Regenegat", -1, 100);
+                ActCreatePlObj(PLAYER_3, AIREL_MYSELF, SI_FLAGSHIP, 85, 103, 2, LOGO_3, "Regenegat", -1, 100);
+
+            //ActCreatePlObj(PLAYER_3, AIREL_MYSELF, VERMIN, 81, 107, 2, LOGO_3, "LEFT_FREN_SI", -1, 100, VEFF_TELEPORT);
+            //ActCreatePlObj(PLAYER_3, AIREL_MYSELF, BIO_ACID_ASSAULTER, 79, 111, 2, LOGO_3, "LEFT_FREN_SI", -1, 100, VEFF_TELEPORT);
+            //ActCreatePlObj(PLAYER_3, AIREL_MYSELF, PARALYSIS_PROBE, 87, 111, 2, LOGO_3, "LEFT_FREN_SI", -1, 100, VEFF_TELEPORT);
             } else {
                 ActLockEvent();
             }

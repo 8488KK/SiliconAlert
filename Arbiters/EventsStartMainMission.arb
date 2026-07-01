@@ -1,0 +1,18 @@
+    EventBriefing(_PS0 == "INTRO_FINAL"){
+
+        if(_GL0==1){
+            ActCreateDest(0, LOGO_1, START_POS_X_PL1, START_POS_Y_PL1, 1);
+            ActCreatePlObj(PLAYER_1, AIREL_MYSELF, ASSEMBLER, START_POS_X_PL1, START_POS_Y_PL1, 2, LOGO_1, "", -1, 100, VEFF_TELEPORT);
+            ActSetScreen(PLAYER_1, AIREL_MYSELF,  START_POS_X_PL1, START_POS_Y_PL1, SCROLL_SOFT);
+        }
+        if(_GL1==1){
+            ActCreateDest(0, LOGO_4, START_POS_X_PL4, START_POS_Y_PL4, 1);
+            ActCreatePlObj(PLAYER_4, AIREL_MYSELF, CONSTRUCTOR, START_POS_X_PL4, START_POS_Y_PL4, 2, LOGO_4, "", -1, 100, VEFF_TELEPORT);
+        ActSetScreen(PLAYER_4, AIREL_MYSELF,  START_POS_X_PL1, START_POS_Y_PL1, SCROLL_SOFT);
+        }
+        if(_GL2==1){
+            ActCreateDest(0, LOGO_7, START_POS_X_PL7, START_POS_Y_PL7, 1);
+            ActCreatePlObj(PLAYER_7, AIREL_MYSELF, ASSEMBLER, START_POS_X_PL7, START_POS_Y_PL7, 2, LOGO_4, "", -1, 100, VEFF_TELEPORT);
+            ActSetScreen(PLAYER_7, AIREL_MYSELF,  START_POS_X_PL1, START_POS_Y_PL1, SCROLL_SOFT);
+        }
+    }
